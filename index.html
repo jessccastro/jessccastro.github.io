@@ -10,12 +10,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- GA4 — uncomment and replace ID when ready
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-  -->
-
+ 
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5JNXS2DYG"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5JNXS2DYG');</script>
+ 
   <style>
     :root {
       --purple:    #3B2D8F;
@@ -43,12 +42,12 @@
     body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--ink); background: var(--white); -webkit-font-smoothing: antialiased; }
     a { color: var(--purple); text-decoration: none; }
     a:hover { text-decoration: underline; }
-
+ 
     /* LAYOUT */
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
     section { padding: 80px 0; }
     section + section { border-top: 1px solid var(--border); }
-
+ 
     /* NAVBAR */
     nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
     .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
@@ -56,7 +55,7 @@
     .nav-right { display: flex; align-items: center; gap: 20px; }
     .nav-link { font-size: 13px; font-weight: 500; color: var(--ink-mid); transition: color var(--transition); }
     .nav-link:hover { color: var(--purple); text-decoration: none; }
-
+ 
     /* LANG SELECTOR */
     .lang-selector { display: flex; align-items: center; gap: 2px; background: var(--surface); border: 1px solid var(--border); border-radius: 99px; padding: 3px; }
     .lang-btn {
@@ -69,7 +68,7 @@
     .lang-btn .flag { font-size: 14px; line-height: 1; }
     .lang-btn.active { background: var(--purple); color: var(--white); }
     .lang-btn:hover:not(.active) { background: var(--border); color: var(--ink); }
-
+ 
     /* mobile: hide text labels, show only flags */
     @media (max-width: 560px) {
       .lang-btn .lang-code { display: none; }
@@ -77,11 +76,9 @@
       .nav-right { gap: 12px; }
       .nav-link { display: none; }
     }
-
+ 
     /* HERO */
     .hero { padding: 80px 0 60px; border-top: none; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-lt); color: var(--teal); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 14px; border-radius: 99px; margin-bottom: 24px; }
-    .hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); display: inline-block; }
     .hero h1 { font-family: var(--font-display); font-size: clamp(34px, 6vw, 52px); line-height: 1.1; letter-spacing: -1px; color: var(--ink); margin-bottom: 20px; }
     .hero h1 em { font-style: italic; color: var(--purple); }
     .hero-sub { font-size: 18px; color: var(--ink-mid); max-width: 560px; margin-bottom: 36px; line-height: 1.65; }
@@ -90,13 +87,13 @@
     .btn-primary:hover { background: #2e2270; text-decoration: none; transform: translateY(-1px); }
     .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--ink); font-size: 14px; font-weight: 500; padding: 12px 24px; border-radius: var(--radius-sm); border: 1px solid var(--border); transition: border-color var(--transition), color var(--transition); }
     .btn-secondary:hover { border-color: var(--purple); color: var(--purple); text-decoration: none; }
-
+ 
     /* STATS */
     .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
     .stat-card { background: var(--surface); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border); }
     .stat-number { font-family: var(--font-display); font-size: 32px; color: var(--purple); line-height: 1; margin-bottom: 4px; }
     .stat-label { font-size: 13px; color: var(--ink-mid); line-height: 1.4; }
-
+ 
     /* ABOUT */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
     @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; gap: 28px; } }
@@ -108,7 +105,7 @@
     .tag { font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; background: var(--purple-lt); color: var(--purple); }
     .tag.teal { background: var(--teal-lt); color: var(--teal); }
     .tag.gold { background: var(--gold-lt); color: var(--gold); }
-
+ 
     /* CASES */
     .cases { display: flex; flex-direction: column; gap: 28px; }
     .case-card { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; transition: box-shadow var(--transition), border-color var(--transition); }
@@ -126,7 +123,7 @@
     .outcome-label { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
     .case-link { font-size: 13px; font-weight: 600; color: var(--purple); display: inline-flex; align-items: center; gap: 4px; }
     .case-link:hover { text-decoration: underline; }
-
+ 
     /* LANGUAGES SHOWCASE — new section */
     .lang-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin-top: 32px; }
     .lang-card { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 22px; display: flex; flex-direction: column; gap: 6px; }
@@ -134,7 +131,7 @@
     .lang-card-name { font-weight: 600; font-size: 15px; color: var(--ink); }
     .lang-card-level { font-size: 12px; color: var(--teal); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
     .lang-card-note { font-size: 12px; color: var(--ink-soft); line-height: 1.4; margin-top: 2px; }
-
+ 
     /* TIMELINE */
     .timeline { display: flex; flex-direction: column; }
     .tl-item { display: grid; grid-template-columns: 130px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--border); }
@@ -144,14 +141,14 @@
     .tl-company { font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 2px; }
     .tl-role { font-size: 14px; color: var(--purple); font-weight: 500; margin-bottom: 6px; }
     .tl-desc { font-size: 14px; color: var(--ink-mid); }
-
+ 
     /* DIFFERENTIATORS */
     .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; }
     .diff-card { padding: 24px; border: 1px solid var(--border); border-radius: var(--radius-md); }
     .diff-icon { font-size: 24px; margin-bottom: 12px; }
     .diff-title { font-weight: 600; font-size: 15px; margin-bottom: 6px; color: var(--ink); }
     .diff-desc { font-size: 13px; color: var(--ink-mid); line-height: 1.55; }
-
+ 
     /* FOOTER */
     footer { background: var(--ink); color: var(--white); padding: 64px 0; }
     footer h2 { color: var(--white); font-family: var(--font-display); font-size: 32px; margin-bottom: 12px; }
@@ -162,13 +159,13 @@
     .contact-link.cta-main { background: var(--teal); border-color: var(--teal); }
     .contact-link.cta-main:hover { background: #0a6858; border-color: #0a6858; }
     .footer-bottom { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: rgba(255,255,255,0.3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-
+ 
     @media (max-width: 480px) { section { padding: 56px 0; } .hero { padding: 56px 0 40px; } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
   </style>
 </head>
 <body>
-
+ 
 <!-- NAVBAR -->
 <nav>
   <div class="nav-inner">
@@ -194,48 +191,42 @@
     </div>
   </div>
 </nav>
-
-
+ 
+ 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="hero-eyebrow" data-i18n="hero.badge">Open to new opportunities</div>
-
     <h1 data-i18n-html="hero.headline">
       Building products at the <em>intersection</em> of payments &amp; people.
     </h1>
-
+ 
     <p class="hero-sub" data-i18n="hero.sub">
       Senior PM with 4+ years in fintech and loyalty across Latin America and Europe. I turn complex financial systems into experiences that work for real people.
     </p>
-
+ 
     <div class="hero-ctas">
-      <a href="#work" class="btn-primary" data-i18n="hero.cta1" onclick="trackEvent('hero_cta_click')">See my work →</a>
-      <a href="mailto:jessica.castilho.castro@gmail.com" class="btn-secondary" data-i18n="hero.cta2" onclick="trackEvent('email_click')">Get in touch</a>
+      <a href="https://wa.me/5511993129893" target="_blank" class="btn-primary" data-i18n="hero.cta.whatsapp" onclick="trackEvent('hero_whatsapp_click')">💬 WhatsApp</a>
+      <a href="mailto:jessica.castilho.castro@gmail.com" class="btn-secondary" data-i18n="hero.cta.email" onclick="trackEvent('hero_email_click')">✉ Email</a>
     </div>
-
+ 
     <div class="stats">
       <div class="stat-card">
         <div class="stat-number">4+</div>
         <div class="stat-label" data-i18n="stats.years">Years in product management</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">3</div>
+        <div class="stat-number">2</div>
         <div class="stat-label" data-i18n="stats.countries">Countries worked across</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">4</div>
         <div class="stat-label" data-i18n="stats.languages">Languages spoken fluently</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">~6wk</div>
-        <div class="stat-label" data-i18n="stats.mvp">MVP shipped: 0 → pilot</div>
-      </div>
     </div>
   </div>
 </section>
-
-
+ 
+ 
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
@@ -249,30 +240,23 @@
       <div>
         <span class="section-label" data-i18n="about.expertise_label">Expertise</span>
         <div class="tag-cloud">
-          <span class="tag">Payments</span>
           <span class="tag">Fintech</span>
-          <span class="tag teal" data-i18n="tag.loyalty">Loyalty &amp; Subscriptions</span>
-          <span class="tag teal" data-i18n="tag.credit">Credit &amp; BNPL</span>
-          <span class="tag gold" data-i18n="tag.discovery">Discovery &amp; Delivery</span>
-          <span class="tag gold" data-i18n="tag.stakeholders">Stakeholder Management</span>
-          <span class="tag">Pix / Open Finance</span>
-          <span class="tag">OKRs / Opportunity Tree</span>
-          <span class="tag teal" data-i18n="tag.ai">AI-powered ops</span>
-          <span class="tag" data-i18n="tag.markets">LATAM &amp; EU markets</span>
+          <span class="tag teal" data-i18n="tag.loyalty">Loyalty</span>
+          <span class="tag gold" data-i18n="tag.cx">Customer Experience</span>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
+ 
+ 
 <!-- LANGUAGES -->
 <section id="languages">
   <div class="container">
     <span class="section-label" data-i18n="lang.label">Languages</span>
     <h2 data-i18n="lang.h2">I work in four languages. Really.</h2>
     <p data-i18n="lang.sub" style="max-width:540px">Not "conversational" — certified, professional fluency built across countries, teams, and cultures. The version of this page you're reading right now is proof.</p>
-
+ 
     <div class="lang-showcase">
       <div class="lang-card">
         <div class="lang-card-flag">🇧🇷</div>
@@ -284,34 +268,34 @@
         <div class="lang-card-flag">🇺🇸</div>
         <div class="lang-card-name" data-i18n="lang.en.name">English</div>
         <div class="lang-card-level" data-i18n="lang.en.level">Fluent — C2</div>
-        <div class="lang-card-note" data-i18n="lang.en.note">Daily work language across international teams at Swile, Nubank, and Bitso.</div>
+        <div class="lang-card-note" data-i18n="lang.en.note">Daily work language at Swile, during my academic exchange in Hungary, and throughout my experience at AIESEC.</div>
       </div>
       <div class="lang-card">
         <div class="lang-card-flag">🇫🇷</div>
         <div class="lang-card-name" data-i18n="lang.fr.name">Français</div>
-        <div class="lang-card-level" data-i18n="lang.fr.level">Fluent — DELF/DALF certified</div>
-        <div class="lang-card-note" data-i18n="lang.fr.note">Lived and worked in France. Certified proficiency.</div>
+        <div class="lang-card-level" data-i18n="lang.fr.level">Fluent — DALF C2</div>
+        <div class="lang-card-note" data-i18n="lang.fr.note">Official certification from the French Ministry of Education. Lived and worked in France.</div>
       </div>
       <div class="lang-card">
         <div class="lang-card-flag">🇪🇸</div>
         <div class="lang-card-name" data-i18n="lang.es.name">Español</div>
-        <div class="lang-card-level" data-i18n="lang.es.level">Fluent</div>
-        <div class="lang-card-note" data-i18n="lang.es.note">Natural fluency from Portuguese proximity and professional use across LATAM markets.</div>
+        <div class="lang-card-level" data-i18n="lang.es.level">Fluent — DELE B2</div>
+        <div class="lang-card-note" data-i18n="lang.es.note">Official DELE B2 certification. Used professionally at AIESEC in the LATAM context.</div>
       </div>
     </div>
   </div>
 </section>
-
-
+ 
+ 
 <!-- WORK -->
 <section id="work">
   <div class="container">
     <span class="section-label" data-i18n="work.label">Selected work</span>
     <h2 data-i18n="work.h2">How I think. What I ship.</h2>
     <p style="margin-bottom:40px" data-i18n="work.sub">Real projects — each with a problem worth solving, a process worth documenting, and an outcome worth measuring.</p>
-
+ 
     <div class="cases">
-
+ 
       <div class="case-card">
         <div class="case-tag payments" data-i18n="case1.tag">Payments · Credit · B2B SaaS</div>
         <h3 data-i18n="case1.title">Expanding credit access through a new lender integration</h3>
@@ -333,7 +317,7 @@
         </div>
         <span class="case-link" data-i18n="case.read">Read the full case →</span>
       </div>
-
+ 
       <div class="case-card">
         <div class="case-tag ops" data-i18n="case2.tag">Product Operations · Process Design</div>
         <h3 data-i18n="case2.title">Building a Product Operations function from scratch</h3>
@@ -341,7 +325,7 @@
         <p class="case-body" data-i18n="case2.body">Structured a Product Operations capability for a growing PM team — defining rituals, templates, and metrics frameworks that enable PMs to operate with less friction and more consistency at scale.</p>
         <span class="case-link" data-i18n="case.read">Read the full case →</span>
       </div>
-
+ 
       <div class="case-card">
         <div class="case-tag cx" data-i18n="case3.tag">Reconciliation · Payments · Crypto</div>
         <h3 data-i18n="case3.title">AUM Reconciliation Platform — monolith to microservices</h3>
@@ -349,18 +333,18 @@
         <p class="case-body" data-i18n="case3.body">Migration strategy from a V2 monolith to event-driven microservices for Bitso's reconciliation squad, using Strangler Fig pattern and Shadow Mode validation. Framing: trust rebuilt through co-owned SLOs.</p>
         <span class="case-link" data-i18n="case.read">Read the full case →</span>
       </div>
-
+ 
     </div>
   </div>
 </section>
-
-
+ 
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
     <span class="section-label" data-i18n="exp.label">Experience</span>
     <h2 data-i18n="exp.h2">Where I've built.</h2>
-
+ 
     <div class="timeline" style="margin-top:32px">
       <div class="tl-item">
         <div class="tl-date">2024 – present</div>
@@ -397,8 +381,8 @@
     </div>
   </div>
 </section>
-
-
+ 
+ 
 <!-- DIFFERENTIATORS -->
 <section id="differentiators">
   <div class="container">
@@ -429,15 +413,16 @@
     </div>
   </div>
 </section>
-
-
+ 
+ 
 <!-- FOOTER / CONTACT -->
 <footer id="contact">
   <div class="container">
     <h2 data-i18n="footer.h2">Let's talk.</h2>
     <p data-i18n="footer.sub">I'm open to Senior PM and Principal PM roles in fintech, payments, or loyalty — in Brazil, France, or internationally. Write to me in any of my four languages.</p>
     <div class="contact-links">
-      <a href="mailto:jessica.castilho.castro@gmail.com" class="contact-link cta-main" data-i18n="footer.email" onclick="trackEvent('email_click')">✉ Send an email</a>
+      <a href="https://wa.me/5511993129893" target="_blank" class="contact-link cta-main" data-i18n="footer.whatsapp" onclick="trackEvent('whatsapp_click')">💬 WhatsApp</a>
+      <a href="mailto:jessica.castilho.castro@gmail.com" class="contact-link" data-i18n="footer.email" onclick="trackEvent('email_click')">✉ Email</a>
       <a href="https://www.linkedin.com/in/jessccastro/" target="_blank" class="contact-link" onclick="trackEvent('linkedin_click')">↗ LinkedIn</a>
       <a href="https://medium.com/@jessica.castilho.castro" target="_blank" class="contact-link" onclick="trackEvent('medium_click')">↗ Medium</a>
       <a href="#" class="contact-link" data-i18n="footer.resume" onclick="trackEvent('resume_download'); return false;">↓ Resume / CV</a>
@@ -448,8 +433,8 @@
     </div>
   </div>
 </footer>
-
-
+ 
+ 
 <script>
 /* ═══════════════════════════════════════════════
    TRANSLATIONS
@@ -458,92 +443,82 @@
    FR=formal "vous" register, ES=LATAM neutral
 ═══════════════════════════════════════════════ */
 const i18n = {
-
+ 
   /* NAV */
   "nav.work":        { en:"Work",        pt:"Cases",        fr:"Projets",      es:"Proyectos" },
   "nav.experience":  { en:"Experience",  pt:"Experiência",  fr:"Parcours",     es:"Experiencia" },
   "nav.contact":     { en:"Contact",     pt:"Contato",      fr:"Contact",      es:"Contacto" },
-
+ 
   /* HERO */
-  "hero.badge": {
-    en: "Open to new opportunities",
-    pt: "Aberta a novas oportunidades",
-    fr: "Ouverte aux nouvelles opportunités",
-    es: "Abierta a nuevas oportunidades"
-  },
   "hero.headline": {
-    en: "Building products at the <em>intersection</em> of payments &amp; people.",
-    pt: "Construindo produtos na <em>interseção</em> entre pagamentos &amp; pessoas.",
-    fr: "Créer des produits à l'<em>intersection</em> des paiements et des personnes.",
-    es: "Construyendo productos en la <em>intersección</em> entre pagos y personas."
+    en: "Building products at the <em>intersection</em> of fintech, loyalty and customer experience.",
+    pt: "Construindo produtos na <em>intersecção</em> entre fintech, fidelidade e experiência do cliente.",
+    fr: "Créer des produits à l'<em>intersection</em> de la fintech, la fidélisation et l'expérience client.",
+    es: "Construyendo productos en la <em>intersección</em> entre fintech, fidelización y experiencia del cliente."
   },
   "hero.sub": {
-    en: "Senior PM with 4+ years in fintech and loyalty across Latin America and Europe. I turn complex financial systems into experiences that work for real people.",
-    pt: "PM Sênior com mais de 4 anos em fintech e fidelização na América Latina e Europa. Transformo sistemas financeiros complexos em experiências que funcionam para pessoas reais.",
-    fr: "Senior PM avec plus de 4 ans dans la fintech et la fidélisation en Amérique Latine et en Europe. Je transforme des systèmes financiers complexes en expériences qui fonctionnent vraiment pour les utilisateurs.",
-    es: "Senior PM con más de 4 años en fintech y fidelización en América Latina y Europa. Transformo sistemas financieros complejos en experiencias que funcionan para personas reales."
+    en: "Senior PM with 4+ years across Latin America and Europe. I turn complex problems into solutions and experiences that work for real people and generate results for businesses.",
+    pt: "PM Sênior com mais de 4 anos na América Latina e Europa. Transformo problemas complexos em soluções e experiências que funcionam para pessoas reais e negócios gerando resultado.",
+    fr: "Senior PM avec plus de 4 ans en Amérique Latine et en Europe. Je transforme des problèmes complexes en solutions et expériences qui fonctionnent pour les utilisateurs et génèrent des résultats pour les entreprises.",
+    es: "Senior PM con más de 4 años en América Latina y Europa. Transformo problemas complejos en soluciones y experiencias que funcionan para personas reales y generan resultados para los negocios."
   },
-  "hero.cta1": { en:"See my work →", pt:"Ver meus cases →", fr:"Voir mes projets →", es:"Ver mi trabajo →" },
-  "hero.cta2": { en:"Get in touch",  pt:"Fale comigo",     fr:"Me contacter",      es:"Escríbeme" },
-
+  "hero.cta.whatsapp": { en:"💬 WhatsApp", pt:"💬 WhatsApp", fr:"💬 WhatsApp", es:"💬 WhatsApp" },
+  "hero.cta.email":    { en:"✉ Email",     pt:"✉ Email",    fr:"✉ Email",    es:"✉ Email" },
+ 
   /* STATS */
   "stats.years":     { en:"Years in product management",  pt:"Anos em gestão de produto",      fr:"Ans en gestion de produit",         es:"Años en gestión de producto" },
   "stats.countries": { en:"Countries worked across",      pt:"Países onde atuei",              fr:"Pays d'expérience professionnelle",  es:"Países donde trabajé" },
   "stats.languages": { en:"Languages spoken fluently",    pt:"Idiomas falados fluentemente",   fr:"Langues maîtrisées",                es:"Idiomas hablados con fluidez" },
   "stats.mvp":       { en:"MVP shipped: 0 → pilot",       pt:"MVP entregue: 0 → piloto",       fr:"MVP livré : 0 → pilote",             es:"MVP lanzado: 0 → piloto" },
-
+ 
   /* ABOUT */
   "about.label":         { en:"About",      pt:"Sobre",          fr:"À propos",    es:"Acerca de mí" },
   "about.h2":            { en:"Payments nerd. People person. Problem solver.", pt:"Apaixonada por pagamentos. Movida por pessoas. Resolvendo problemas.", fr:"Passionnée par les paiements. Centrée sur les personnes. Résolvante de problèmes.", es:"Apasionada por los pagos. Orientada a las personas. Resolviendo problemas." },
   "about.p1": {
-    en: "I started in Customer Experience, fell in love with fintech, and transitioned into Product in 2023. Since then I've worked across credit, loyalty, and payment infrastructure — always with the conviction that the best products start with the messiest human problems.",
-    pt: "Comecei em Customer Experience, me apaixonei por fintech e migrei para Produto em 2023. Desde então trabalhei em crédito, fidelização e infraestrutura de pagamentos — sempre com a convicção de que os melhores produtos começam pelos problemas humanos mais difíceis.",
-    fr: "J'ai débuté en Expérience Client, je me suis passionnée pour la fintech et j'ai effectué une transition vers le Product Management en 2023. Depuis, j'ai travaillé sur le crédit, la fidélisation et l'infrastructure de paiement — avec la conviction que les meilleurs produits naissent des problèmes humains les plus complexes.",
-    es: "Empecé en Experiencia del Cliente, me enamoré de la fintech y migré a Producto en 2023. Desde entonces trabajé en crédito, fidelización e infraestructura de pagos — siempre convencida de que los mejores productos nacen de los problemas humanos más complejos."
+    en: "I started in Customer Experience at Nubank, fell in love with fintech, and completed my transition into Product in 2023. Since then I've worked on credit, debit, digital account, and loyalty products.",
+    pt: "Comecei em Customer Experience no Nubank, me apaixonei por fintech e finalizei minha migração para Produto em 2023. Desde então trabalhei com produtos de crédito, débito, conta digital e fidelização.",
+    fr: "J'ai commencé en Expérience Client chez Nubank, je me suis passionnée pour la fintech et j'ai finalisé ma transition vers le Product Management en 2023. Depuis, j'ai travaillé sur des produits de crédit, débit, compte digital et fidélisation.",
+    es: "Empecé en Experiencia del Cliente en Nubank, me enamoré de la fintech y completé mi transición a Producto en 2023. Desde entonces trabajé con productos de crédito, débito, cuenta digital y fidelización."
   },
   "about.p2": {
-    en: "Brazilian and global by nature: I've lived in Hungary, France, and Brazil, and worked across teams in multiple countries and languages.",
-    pt: "Brasileira e global por natureza: morei na Hungria, na França e no Brasil, e trabalhei em times multiculturais em vários países e idiomas.",
-    fr: "Brésilienne et internationale par nature : j'ai vécu en Hongrie, en France et au Brésil, et j'ai travaillé avec des équipes pluriculturelles dans plusieurs pays.",
-    es: "Brasileña y global por naturaleza: viví en Hungría, Francia y Brasil, y trabajé con equipos multiculturales en varios países e idiomas."
+    en: "Brazilian and global by nature: I lived and worked in France and Brazil, led teams at AIESEC, an NGO present in 120 countries, and completed an academic exchange in Hungary. I navigate multicultural contexts with ease.",
+    pt: "Brasileira e global por natureza: morei e trabalhei na França e no Brasil, liderei times na AIESEC, ONG presente em 120 países, e realizei intercâmbio acadêmico na Hungria. Navego com facilidade contextos multiculturais.",
+    fr: "Brésilienne et internationale par nature : j'ai vécu et travaillé en France et au Brésil, dirigé des équipes à l'AIESEC, une ONG présente dans 120 pays, et effectué un échange académique en Hongrie. Je navigue avec aisance dans des contextes multiculturels.",
+    es: "Brasileña y global por naturaleza: viví y trabajé en Francia y Brasil, lideré equipos en AIESEC, ONG presente en 120 países, y realicé un intercambio académico en Hungría. Me muevo con facilidad en contextos multiculturales."
   },
   "about.expertise_label": { en:"Expertise", pt:"Especialidades", fr:"Expertises", es:"Especialidades" },
-
+ 
   /* TAGS */
-  "tag.loyalty":     { en:"Loyalty &amp; Subscriptions",   pt:"Fidelização &amp; Assinaturas",  fr:"Fidélisation &amp; Abonnements",     es:"Fidelización &amp; Suscripciones" },
-  "tag.credit":      { en:"Credit &amp; BNPL",             pt:"Crédito &amp; BNPL",             fr:"Crédit &amp; BNPL",                  es:"Crédito &amp; BNPL" },
-  "tag.discovery":   { en:"Discovery &amp; Delivery",      pt:"Discovery &amp; Delivery",       fr:"Discovery &amp; Delivery",           es:"Discovery &amp; Delivery" },
-  "tag.stakeholders":{ en:"Stakeholder Management",        pt:"Gestão de Stakeholders",         fr:"Gestion des parties prenantes",      es:"Gestión de stakeholders" },
-  "tag.ai":          { en:"AI-powered ops",                pt:"Operações com IA",               fr:"Ops propulsées par l'IA",            es:"Ops con IA" },
-  "tag.markets":     { en:"LATAM &amp; EU markets",        pt:"Mercados LATAM &amp; EU",        fr:"Marchés LATAM &amp; Europe",         es:"Mercados LATAM &amp; EU" },
-
+  "tag.loyalty": { en:"Loyalty", pt:"Loyalty", fr:"Fidélisation", es:"Fidelización" },
+  "tag.cx":      { en:"Customer Experience", pt:"Customer Experience", fr:"Expérience Client", es:"Experiencia del Cliente" },
+ 
   /* LANGUAGES SECTION */
   "lang.label": { en:"Languages", pt:"Idiomas", fr:"Langues", es:"Idiomas" },
   "lang.h2":    { en:"I work in four languages. Really.", pt:"Trabalho em quatro idiomas. De verdade.", fr:"Je travaille en quatre langues. Vraiment.", es:"Trabajo en cuatro idiomas. De verdad." },
   "lang.sub":   {
-    en: "Not \"conversational\" — certified, professional fluency built across countries, teams, and cultures. The version of this page you're reading right now is proof.",
-    pt: "Não é \"nível conversacional\" — é fluência certificada e profissional construída em países, times e culturas diferentes. A versão desta página que você está lendo agora é a prova.",
-    fr: "Pas un simple niveau \"conversationnel\" — une maîtrise certifiée et professionnelle, forgée dans différents pays, équipes et cultures. La version de cette page que vous lisez en ce moment en est la preuve.",
-    es: "No es un nivel \"conversacional\" — es fluidez certificada y profesional construida en diferentes países, equipos y culturas. La versión de esta página que estás leyendo ahora mismo es la prueba."
+    en: "Not \"conversational\" — certified fluency, with real academic and professional application. Built across different countries, teams and cultures.",
+    pt: "Não é \"nível conversacional\" — é fluência certificada, com aplicação real de forma acadêmica e profissional. Experiência construída em países, times e culturas diferentes.",
+    fr: "Pas un simple niveau \"conversationnel\" — une maîtrise certifiée, avec une application réelle sur le plan académique et professionnel. Construite dans différents pays, équipes et cultures.",
+    es: "No es un nivel \"conversacional\" — es fluidez certificada, con aplicación real académica y profesional. Construida en diferentes países, equipos y culturas."
   },
   "lang.pt.name":  { en:"Portuguese", pt:"Português",  fr:"Portugais",  es:"Portugués" },
   "lang.pt.level": { en:"Native",     pt:"Nativo",     fr:"Langue maternelle", es:"Nativo" },
-  "lang.pt.note":  { en:"Born and raised in Brazil. Entire career built in Brazilian fintech.", pt:"Nascida e criada no Brasil. Carreira construída integralmente no fintech brasileiro.", fr:"Née et élevée au Brésil. Toute la carrière construite dans la fintech brésilienne.", es:"Nacida y criada en Brasil. Carrera construida íntegramente en la fintech brasileña." },
+  "lang.pt.note":  { en:"Born and raised in Brazil. Brazilian Portuguese is my native language.", pt:"Nascida e criada no Brasil, o português brasileiro é meu idioma nativo.", fr:"Née et élevée au Brésil. Le portugais brésilien est ma langue maternelle.", es:"Nacida y criada en Brasil. El portugués brasileño es mi idioma nativo." },
   "lang.en.name":  { en:"English",   pt:"Inglês",     fr:"Anglais",    es:"Inglés" },
   "lang.en.level": { en:"Fluent — C2", pt:"Fluente — C2", fr:"Courant — C2", es:"Fluido — C2" },
-  "lang.en.note":  { en:"Daily work language across international teams at Swile, Nubank, and Bitso.", pt:"Idioma de trabalho diário em times internacionais na Swile, Nubank e Bitso.", fr:"Langue de travail quotidienne dans des équipes internationales chez Swile, Nubank et Bitso.", es:"Idioma de trabajo diario en equipos internacionales en Swile, Nubank y Bitso." },
+  "lang.en.note":  { en:"Daily work language at Swile, during my academic exchange in Hungary, and throughout my experience at AIESEC.", pt:"Idioma de trabalho diário na Swile, durante intercâmbio na Hungria e na AIESEC.", fr:"Langue de travail quotidienne chez Swile, lors de mon échange académique en Hongrie et tout au long de mon expérience à l'AIESEC.", es:"Idioma de trabajo diario en Swile, durante el intercambio académico en Hungría y en la AIESEC." },
   "lang.fr.name":  { en:"French",    pt:"Francês",    fr:"Français",   es:"Francés" },
-  "lang.fr.level": { en:"Fluent — DELF/DALF certified", pt:"Fluente — certificado DELF/DALF", fr:"Courant — certifiée DELF/DALF", es:"Fluido — certificado DELF/DALF" },
-  "lang.fr.note":  { en:"Lived and worked in France. Official certification.", pt:"Morei e trabalhei na França. Certificação oficial.", fr:"A vécu et travaillé en France. Certification officielle.", es:"Viví y trabajé en Francia. Certificación oficial." },
+  "lang.fr.level": { en:"Fluent — DALF C2", pt:"Fluente — DALF C2", fr:"Courant — DALF C2", es:"Fluido — DALF C2" },
+  "lang.fr.note":  { en:"Official certification from the French Ministry of Education. Lived and worked in France.", pt:"Certificação oficial do Ministério da Educação da França. Morei e trabalhei na França.", fr:"Certification officielle du Ministère de l'Éducation nationale. A vécu et travaillé en France.", es:"Certificación oficial del Ministerio de Educación de Francia. Viví y trabajé en Francia." },
   "lang.es.name":  { en:"Spanish",   pt:"Espanhol",   fr:"Espagnol",   es:"Español" },
-  "lang.es.level": { en:"Fluent",    pt:"Fluente",    fr:"Courant",    es:"Fluido" },
-  "lang.es.note":  { en:"Natural fluency from Portuguese proximity and professional use across LATAM markets.", pt:"Fluência natural pela proximidade com o português e uso profissional em mercados LATAM.", fr:"Maîtrise naturelle issue de la proximité avec le portugais et d'une utilisation professionnelle sur les marchés LATAM.", es:"Fluidez natural por la proximidad con el portugués y uso profesional en mercados LATAM." },
-
+  "lang.es.level": { en:"Fluent — DELE B2", pt:"Fluente — DELE B2", fr:"Courant — DELE B2", es:"Fluido — DELE B2" },
+  "lang.es.note":  { en:"Official DELE B2 certification. Used professionally at AIESEC in the LATAM context.", pt:"Certificação oficial DELE B2. Utilização profissional na AIESEC no contexto LATAM.", fr:"Certification officielle DELE B2. Utilisé professionnellement à l'AIESEC dans le contexte LATAM.", es:"Certificación oficial DELE B2. Uso profesional en AIESEC en el contexto LATAM." },
+ 
   /* WORK */
   "work.label": { en:"Selected work", pt:"Cases selecionados", fr:"Projets sélectionnés", es:"Proyectos seleccionados" },
   "work.h2":    { en:"How I think. What I ship.", pt:"Como penso. O que entrego.", fr:"Ma façon de penser. Ce que je livre.", es:"Cómo pienso. Lo que entrego." },
   "work.sub":   { en:"Real projects — each with a problem worth solving, a process worth documenting, and an outcome worth measuring.", pt:"Projetos reais — cada um com um problema que valia resolver, um processo que valia documentar e um resultado que valia medir.", fr:"Des projets réels — chacun avec un problème à résoudre, un processus à documenter et un résultat à mesurer.", es:"Proyectos reales — cada uno con un problema que valía resolver, un proceso que valía documentar y un resultado que valía medir." },
-
+ 
   "case1.tag":        { en:"Payments · Credit · B2B SaaS",          pt:"Pagamentos · Crédito · B2B SaaS",           fr:"Paiements · Crédit · B2B SaaS",             es:"Pagos · Crédito · B2B SaaS" },
   "case1.title":      { en:"Expanding credit access through a new lender integration", pt:"Ampliando acesso ao crédito com nova integração de credor", fr:"Améliorer l'accès au crédit via une nouvelle intégration de prêteur", es:"Ampliar el acceso al crédito con una nueva integración de acreedor" },
   "case1.sub":        { en:"Dr.Cash — 2023 · SaaS platform for health financing",       pt:"Dr.Cash — 2023 · Plataforma SaaS para financiamento de saúde", fr:"Dr.Cash — 2023 · Plateforme SaaS pour le financement de la santé", es:"Dr.Cash — 2023 · Plataforma SaaS de financiamiento de salud" },
@@ -553,19 +528,19 @@ const i18n = {
   "case1.out2.val":   { en:"↑ Financed volume",            pt:"↑ Volume financiado",       fr:"↑ Volume financé",            es:"↑ Volumen financiado" },
   "case1.out2.label": { en:"R$ X M increase (confidential)", pt:"Aumento de R$ X M (confidencial)", fr:"Augmentation de R$ X M (confidentiel)", es:"Aumento de R$ X M (confidencial)" },
   "case1.out3.label": { en:"Discovery to pilot",           pt:"Discovery ao piloto",       fr:"Du Discovery au pilote",      es:"Del Discovery al piloto" },
-
+ 
   "case2.tag":   { en:"Product Operations · Process Design", pt:"Product Operations · Processos", fr:"Product Operations · Conception de processus", es:"Product Operations · Diseño de procesos" },
   "case2.title": { en:"Building a Product Operations function from scratch", pt:"Construindo uma função de Product Operations do zero", fr:"Créer une fonction Product Operations from scratch", es:"Construir una función de Product Operations desde cero" },
   "case2.sub":   { en:"RD Station — 2024 · B2B SaaS / Marketing tech", pt:"RD Station — 2024 · B2B SaaS / Marketing tech", fr:"RD Station — 2024 · B2B SaaS / Marketing tech", es:"RD Station — 2024 · B2B SaaS / Marketing tech" },
   "case2.body":  { en:"Structured a Product Operations capability for a growing PM team — defining rituals, templates, and metrics frameworks that enable PMs to operate with less friction and more consistency at scale.", pt:"Estruturei uma capacidade de Product Operations para um time de produto em crescimento — definindo rituais, templates e frameworks de métricas que permitem PMs operarem com menos atrito e mais consistência.", fr:"Mise en place d'une capacité Product Operations pour une équipe PM en croissance — définition des rituels, templates et frameworks de métriques permettant aux PMs de travailler avec moins de friction et plus de cohérence.", es:"Estructuré una capacidad de Product Operations para un equipo de PM en crecimiento — definiendo rituales, plantillas y marcos de métricas que permiten a los PMs operar con menos fricción y más consistencia." },
-
+ 
   "case3.tag":   { en:"Reconciliation · Payments · Crypto", pt:"Reconciliação · Pagamentos · Cripto", fr:"Réconciliation · Paiements · Crypto", es:"Reconciliación · Pagos · Cripto" },
   "case3.title": { en:"AUM Reconciliation Platform — monolith to microservices", pt:"Plataforma de Reconciliação AUM — monolito para microsserviços", fr:"Plateforme de réconciliation AUM — migration monolithe vers microservices", es:"Plataforma de Reconciliación AUM — monolito a microservicios" },
-  "case3.sub":   { en:"Bitso — 2026 · PM case study", pt:"Bitso — 2026 · Case de PM", fr:"Bitso — 2026 · Étude de cas PM", es:"Bitso — 2026 · Caso de estudio PM" },
+  "case3.sub":   { en:"Bitso — 2026 · Business case (selection process)", pt:"Bitso — 2026 · Business case (processo seletivo)", fr:"Bitso — 2026 · Business case (processus de sélection)", es:"Bitso — 2026 · Business case (proceso de selección)" },
   "case3.body":  { en:"Migration strategy from a V2 monolith to event-driven microservices for Bitso's reconciliation squad, using Strangler Fig pattern and Shadow Mode validation. Framing: trust rebuilt through co-owned SLOs.", pt:"Estratégia de migração de um monolito V2 para microsserviços orientados a eventos para o squad de reconciliação do Bitso, usando Strangler Fig pattern e Shadow Mode. Framing: confiança reconstruída via SLOs compartilhados.", fr:"Stratégie de migration d'un monolithe V2 vers des microservices event-driven pour le squad de réconciliation de Bitso, en utilisant le pattern Strangler Fig et la validation en Shadow Mode. Cadrage : confiance reconstruite via des SLOs co-gérés.", es:"Estrategia de migración de un monolito V2 a microservicios orientados a eventos para el squad de reconciliación de Bitso, usando el patrón Strangler Fig y validación en Shadow Mode. Enfoque: confianza reconstruida mediante SLOs compartidos." },
-
+ 
   "case.read":   { en:"Read the full case →", pt:"Ler o case completo →", fr:"Lire le cas complet →", es:"Leer el caso completo →" },
-
+ 
   /* EXPERIENCE */
   "exp.label":   { en:"Experience",    pt:"Experiência",    fr:"Parcours",         es:"Experiencia" },
   "exp.h2":      { en:"Where I've built.", pt:"Onde construí.", fr:"Là où j'ai construit.", es:"Dónde construí." },
@@ -577,7 +552,7 @@ const i18n = {
   "exp3.desc":   { en:"Customer experience and operations at Latin America's leading neobank.", pt:"Experiência do cliente e operações no principal neobank da América Latina.", fr:"Expérience client et opérations au sein du principal néobank d'Amérique Latine.", es:"Experiencia del cliente y operaciones en el principal neobank de América Latina." },
   "exp4.role":   { en:"CX Lead — Brazil &amp; Europe", pt:"CX Lead — Brasil &amp; Europa", fr:"Responsable Expérience Client — Brésil &amp; Europe", es:"CX Lead — Brasil &amp; Europa" },
   "exp4.desc":   { en:"Customer experience leadership across international markets for the benefits and meal voucher fintech, operating in both Brazil and France.", pt:"Liderança de experiência do cliente em mercados internacionais para a fintech de benefícios e vale-refeição, atuando no Brasil e na França.", fr:"Direction de l'expérience client sur les marchés internationaux pour la fintech de titres-restaurant et avantages, opérant au Brésil et en France.", es:"Liderazgo de experiencia del cliente en mercados internacionales para la fintech de beneficios y vales de comida, operando en Brasil y Francia." },
-
+ 
   /* DIFFERENTIATORS */
   "diff.label":  { en:"What I bring",   pt:"O que trago",       fr:"Ce que j'apporte",     es:"Lo que aporto" },
   "diff.h2":     { en:"Why I'm different.", pt:"Por que sou diferente.", fr:"Ce qui me distingue.", es:"Por qué soy diferente." },
@@ -590,30 +565,31 @@ const i18n = {
   "diff3.desc":  { en:"I use AI tools systematically in discovery, content pipelines, and analytics. My L'Occitane resale operation is a live AI product lab.", pt:"Uso ferramentas de IA de forma sistemática em discovery, pipelines de conteúdo e analytics. Minha operação de revenda é um laboratório vivo de produto com IA.", fr:"J'utilise les outils d'IA de manière systématique dans la discovery, les pipelines de contenu et l'analytics. Mon activité de revente L'Occitane est un laboratoire produit IA en conditions réelles.", es:"Uso herramientas de IA de forma sistemática en discovery, pipelines de contenido y analytics. Mi operación de reventa L'Occitane es un laboratorio de producto con IA en vivo." },
   "diff4.title": { en:"CX roots, product mind",    pt:"Raízes em CX, mente de produto",  fr:"Racines CX, esprit produit",      es:"Raíces en CX, mente de producto" },
   "diff4.desc":  { en:"Master's in Customer Experience Marketing. I bring empathy and customer signal into every discovery — not as a soft skill but as a method.", pt:"Mestrado em Marketing de Experiência do Cliente. Trago empatia e sinal do cliente para cada discovery — não como soft skill, mas como método.", fr:"Master en Marketing de l'Expérience Client. J'apporte l'empathie et les signaux clients dans chaque discovery — pas comme une soft skill, mais comme une méthode.", es:"Maestría en Marketing de Experiencia del Cliente. Traigo empatía y señales del cliente a cada discovery — no como soft skill, sino como método." },
-
+ 
   /* FOOTER */
   "footer.h2":     { en:"Let's talk.",          pt:"Vamos conversar.",          fr:"Parlons-en.",                    es:"Hablemos." },
   "footer.sub":    { en:"I'm open to Senior PM and Principal PM roles in fintech, payments, or loyalty — in Brazil, France, or internationally. Write to me in any of my four languages.", pt:"Estou aberta a posições de PM Sênior ou Principal PM em fintech, pagamentos ou fidelização — no Brasil, na França ou internacionalmente. Pode me escrever em qualquer um dos meus quatro idiomas.", fr:"Je suis ouverte aux postes de Senior PM et Principal PM dans la fintech, les paiements ou la fidélisation — en France, au Brésil ou à l'international. Écrivez-moi dans l'une de mes quatre langues.", es:"Estoy abierta a posiciones de Senior PM y Principal PM en fintech, pagos o fidelización — en América Latina, Francia o internacionalmente. Escríbeme en cualquiera de mis cuatro idiomas." },
-  "footer.email":  { en:"✉ Send an email",       pt:"✉ Enviar email",            fr:"✉ Envoyer un message",           es:"✉ Enviar un mensaje" },
+  "footer.whatsapp":{ en:"💬 WhatsApp", pt:"💬 WhatsApp", fr:"💬 WhatsApp", es:"💬 WhatsApp" },
+  "footer.email":  { en:"✉ Email",       pt:"✉ Email",            fr:"✉ Email",                es:"✉ Email" },
   "footer.resume": { en:"↓ Resume / CV",          pt:"↓ Baixar currículo",        fr:"↓ Télécharger le CV",            es:"↓ Descargar CV" },
   "footer.credit": { en:"Built with HTML, curiosity, and a lot of Claude.", pt:"Feito com HTML, curiosidade e muito Claude.", fr:"Construit avec du HTML, de la curiosité et beaucoup de Claude.", es:"Construido con HTML, curiosidad y mucho Claude." }
 };
-
-
+ 
+ 
 /* ═══════════════════════════════════════════════
    LANGUAGE ENGINE
 ═══════════════════════════════════════════════ */
 let currentLang = 'en';
-
+ 
 function setLang(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
-
+ 
   // Update button states
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
-
+ 
   // Update all translated elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
@@ -621,7 +597,7 @@ function setLang(lang) {
       el.textContent = i18n[key][lang];
     }
   });
-
+ 
   // Update elements that need innerHTML (contain <em> etc.)
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.dataset.i18nHtml;
@@ -629,24 +605,24 @@ function setLang(lang) {
       el.innerHTML = i18n[key][lang];
     }
   });
-
+ 
   localStorage.setItem('portfolio-lang', lang);
   trackEvent('lang_switch', lang);
 }
-
+ 
 // Wire up buttons
 document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => setLang(btn.dataset.lang));
 });
-
+ 
 // Restore saved language or detect from browser
 const saved = localStorage.getItem('portfolio-lang');
 const browserLang = navigator.language.slice(0, 2);
 const supported = ['en', 'pt', 'fr', 'es'];
 const initial = saved || (supported.includes(browserLang) ? browserLang : 'en');
 if (initial !== 'en') setLang(initial);
-
-
+ 
+ 
 /* ═══════════════════════════════════════════════
    ANALYTICS
 ═══════════════════════════════════════════════ */
@@ -655,7 +631,7 @@ function trackEvent(name, label) {
   if (typeof plausible !== 'undefined') plausible(name, { props: { label: label || '' } });
   console.log('[analytics]', name, label || '');
 }
-
+ 
 // Active nav on scroll
 const sections = document.querySelectorAll('section[id], footer[id]');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -668,6 +644,7 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.25 });
 sections.forEach(s => obs.observe(s));
 </script>
-
+ 
 </body>
 </html>
+ 
