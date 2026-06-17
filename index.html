@@ -85,6 +85,8 @@
     .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 56px; }
     .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--purple); color: var(--white); font-size: 14px; font-weight: 600; padding: 12px 24px; border-radius: var(--radius-sm); transition: background var(--transition), transform var(--transition); }
     .btn-primary:hover { background: #2e2270; text-decoration: none; transform: translateY(-1px); }
+    .btn-primary.btn-whatsapp { background: #25D366; }
+    .btn-primary.btn-whatsapp:hover { background: #1da851; }
     .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--ink); font-size: 14px; font-weight: 500; padding: 12px 24px; border-radius: var(--radius-sm); border: 1px solid var(--border); transition: border-color var(--transition), color var(--transition); }
     .btn-secondary:hover { border-color: var(--purple); color: var(--purple); text-decoration: none; }
  
@@ -123,6 +125,18 @@
     .outcome-label { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
     .case-link { font-size: 13px; font-weight: 600; color: var(--purple); display: inline-flex; align-items: center; gap: 4px; }
     .case-link:hover { text-decoration: underline; }
+    .case-link.coming-soon { color: var(--ink-soft); cursor: default; font-style: italic; }
+    .case-link.coming-soon:hover { text-decoration: none; }
+    .case-quote { margin: 20px 0; padding: 16px 20px; border-left: 3px solid var(--teal); background: var(--teal-lt); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+    .case-quote p { font-size: 14px; color: var(--ink); font-style: italic; margin-bottom: 8px; line-height: 1.6; }
+    .case-quote-author { font-size: 12px; color: var(--teal); font-weight: 600; text-decoration: none; display: block; }
+    .case-quote-author:hover { text-decoration: underline; }
+    .case-filters { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+    .case-filter { font-size: 13px; font-weight: 600; padding: 7px 18px; border-radius: 99px; border: 1.5px solid var(--border); background: transparent; color: var(--ink-mid); cursor: pointer; transition: all var(--transition); }
+    .case-filter:hover { border-color: var(--purple); color: var(--purple); }
+    .case-filter.active { background: var(--purple); color: var(--white); border-color: var(--purple); }
+    .business-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; background: var(--gold-lt); color: var(--gold); margin-bottom: 10px; }
+    .case-card.hidden { display: none; }
  
     /* LANGUAGES SHOWCASE — new section */
     .lang-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin-top: 32px; }
@@ -205,8 +219,14 @@
     </p>
  
     <div class="hero-ctas">
-      <a href="https://wa.me/5511993129893" target="_blank" class="btn-primary" data-i18n="hero.cta.whatsapp" onclick="trackEvent('hero_whatsapp_click')">💬 WhatsApp</a>
-      <a href="mailto:jessica.castilho.castro@gmail.com" class="btn-secondary" data-i18n="hero.cta.email" onclick="trackEvent('hero_email_click')">✉ Email</a>
+      <a href="https://wa.me/5511993129893" target="_blank" class="btn-primary btn-whatsapp" data-i18n="hero.cta.whatsapp" onclick="trackEvent('hero_whatsapp_click')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="mailto:jessica.castilho.castro@gmail.com" class="btn-secondary btn-email" data-i18n="hero.cta.email" onclick="trackEvent('hero_email_click')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.548l8.073-6.055C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        Email
+      </a>
     </div>
  
     <div class="stats">
@@ -292,11 +312,48 @@
   <div class="container">
     <span class="section-label" data-i18n="work.label">Selected work</span>
     <h2 data-i18n="work.h2">How I think. What I ship.</h2>
-    <p style="margin-bottom:40px" data-i18n="work.sub">Real projects — each with a problem worth solving, a process worth documenting, and an outcome worth measuring.</p>
+    <p style="margin-bottom:28px" data-i18n="work.sub">Real projects — each with a problem worth solving, a process worth documenting, and an outcome worth measuring.</p>
+ 
+    <!-- Filter tabs -->
+    <div class="case-filters" role="tablist">
+      <button class="case-filter active" data-filter="all" onclick="filterCases('all')" data-i18n="filter.all">All</button>
+      <button class="case-filter" data-filter="real" onclick="filterCases('real')" data-i18n="filter.real">Real cases</button>
+      <button class="case-filter" data-filter="business" onclick="filterCases('business')" data-i18n="filter.business">Business cases</button>
+    </div>
  
     <div class="cases">
  
-      <div class="case-card">
+      <!-- Case 0: Minu — Logs de Auditoria -->
+      <div class="case-card" data-type="real">
+        <div class="case-tag ops" data-i18n="case0.tag">Security · B2B SaaS · ISO 27001</div>
+        <h3 data-i18n="case0.title">Audit Logs — enabling ISO 27001 certification across 3 products</h3>
+        <p class="case-sub" data-i18n="case0.sub">Platform Product Manager · Loyalty &amp; Engagement Platform · 2024–2025</p>
+        <p class="case-body" data-i18n="case0.body">Led the end-to-end discovery and delivery of Audit Logs across Clube, MinuBiz, and MinuShop — coordinating 3 PMs, engineering, security, and DevOps over 6 months. Defined the prioritization criteria, negotiated scope under deadline pressure, and recommended that log standards become a permanent acceptance criterion for all future product development.</p>
+        <div class="case-outcomes">
+          <div class="outcome">
+            <div class="outcome-val" data-i18n="case0.out1.val">ISO 27001:2022</div>
+            <div class="outcome-label" data-i18n="case0.out1.label">Certification obtained &amp; maintained</div>
+          </div>
+          <div class="outcome">
+            <div class="outcome-val" data-i18n="case0.out2.val">3 products</div>
+            <div class="outcome-label" data-i18n="case0.out2.label">Clube · MinuBiz · MinuShop</div>
+          </div>
+          <div class="outcome">
+            <div class="outcome-val" data-i18n="case0.out3.val">6 months</div>
+            <div class="outcome-label" data-i18n="case0.out3.label">Discovery to certification</div>
+          </div>
+        </div>
+        <blockquote class="case-quote">
+          <p data-i18n="case0.quote">"Foi um trabalho que exigiu organização, visão sistêmica e articulação com diferentes áreas, garantindo que os registros e processos estivessem adequados às exigências necessárias."</p>
+          <a href="https://www.linkedin.com/in/mariana-mendes-saraiva/" target="_blank" class="case-quote-author" onclick="trackEvent('recommendation_click', 'mariana')">
+            <strong>Mariana Mendes Saraiva</strong> — Gerente de Produto Sênior, Minu ↗
+          </a>
+        </blockquote>
+        <a href="https://medium.com/@jessica.castilho.castro/logs-de-auditoria-a-entrega-de-uma-demanda-de-seguran%C3%A7a-visto-como-oportunidade-de-produto-7f2035037dae" target="_blank" class="case-link" data-i18n="case.read" onclick="trackEvent('case_link_click', 'minu')">Read the full case →</a>
+      </div>
+ 
+      <!-- Case 1: Dr.Cash -->
+      <div class="case-card" data-type="real">
         <div class="case-tag payments" data-i18n="case1.tag">Payments · Credit · B2B SaaS</div>
         <h3 data-i18n="case1.title">Expanding credit access through a new lender integration</h3>
         <p class="case-sub" data-i18n="case1.sub">Dr.Cash — 2023 · SaaS platform for health financing</p>
@@ -315,23 +372,25 @@
             <div class="outcome-label" data-i18n="case1.out3.label">Discovery to pilot</div>
           </div>
         </div>
-        <span class="case-link" data-i18n="case.read">Read the full case →</span>
+        <a href="https://medium.com/@jessica.castilho.castro/meu-primeiro-produto-ponta-a-ponta-40-dias-e-nasce-um-chatbot-43d8806fbada" target="_blank" class="case-link" data-i18n="case.read" onclick="trackEvent('case_link_click', 'drcash')">Read the full case →</a>
       </div>
  
-      <div class="case-card">
+      <div class="case-card" data-type="business">
         <div class="case-tag ops" data-i18n="case2.tag">Product Operations · Process Design</div>
+        <span class="business-badge" data-i18n="badge.business">Business case</span>
         <h3 data-i18n="case2.title">Building a Product Operations function from scratch</h3>
         <p class="case-sub" data-i18n="case2.sub">RD Station — 2024 · B2B SaaS / Marketing tech</p>
         <p class="case-body" data-i18n="case2.body">Structured a Product Operations capability for a growing PM team — defining rituals, templates, and metrics frameworks that enable PMs to operate with less friction and more consistency at scale.</p>
-        <span class="case-link" data-i18n="case.read">Read the full case →</span>
+        <span class="case-link coming-soon" data-i18n="case.soon">Coming soon →</span>
       </div>
  
-      <div class="case-card">
+      <div class="case-card" data-type="business">
         <div class="case-tag cx" data-i18n="case3.tag">Reconciliation · Payments · Crypto</div>
+        <span class="business-badge" data-i18n="badge.business">Business case</span>
         <h3 data-i18n="case3.title">AUM Reconciliation Platform — monolith to microservices</h3>
-        <p class="case-sub" data-i18n="case3.sub">Bitso — 2026 · PM case study</p>
+        <p class="case-sub" data-i18n="case3.sub">Bitso — 2026 · Business case (selection process)</p>
         <p class="case-body" data-i18n="case3.body">Migration strategy from a V2 monolith to event-driven microservices for Bitso's reconciliation squad, using Strangler Fig pattern and Shadow Mode validation. Framing: trust rebuilt through co-owned SLOs.</p>
-        <span class="case-link" data-i18n="case.read">Read the full case →</span>
+        <span class="case-link coming-soon" data-i18n="case.soon">Coming soon →</span>
       </div>
  
     </div>
@@ -421,8 +480,14 @@
     <h2 data-i18n="footer.h2">Let's talk.</h2>
     <p data-i18n="footer.sub">I'm open to Senior PM and Principal PM roles in fintech, payments, or loyalty — in Brazil, France, or internationally. Write to me in any of my four languages.</p>
     <div class="contact-links">
-      <a href="https://wa.me/5511993129893" target="_blank" class="contact-link cta-main" data-i18n="footer.whatsapp" onclick="trackEvent('whatsapp_click')">💬 WhatsApp</a>
-      <a href="mailto:jessica.castilho.castro@gmail.com" class="contact-link" data-i18n="footer.email" onclick="trackEvent('email_click')">✉ Email</a>
+      <a href="https://wa.me/5511993129893" target="_blank" class="contact-link cta-main" onclick="trackEvent('whatsapp_click')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="footer.whatsapp">WhatsApp</span>
+      </a>
+      <a href="mailto:jessica.castilho.castro@gmail.com" class="contact-link" onclick="trackEvent('email_click')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.548l8.073-6.055C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        <span data-i18n="footer.email">Email</span>
+      </a>
       <a href="https://www.linkedin.com/in/jessccastro/" target="_blank" class="contact-link" onclick="trackEvent('linkedin_click')">↗ LinkedIn</a>
       <a href="https://medium.com/@jessica.castilho.castro" target="_blank" class="contact-link" onclick="trackEvent('medium_click')">↗ Medium</a>
       <a href="#" class="contact-link" data-i18n="footer.resume" onclick="trackEvent('resume_download'); return false;">↓ Resume / CV</a>
@@ -514,6 +579,23 @@ const i18n = {
   "lang.es.level": { en:"Fluent — DELE B2", pt:"Fluente — DELE B2", fr:"Courant — DELE B2", es:"Fluido — DELE B2" },
   "lang.es.note":  { en:"Official DELE B2 certification. Used professionally at AIESEC in the LATAM context.", pt:"Certificação oficial DELE B2. Utilização profissional na AIESEC no contexto LATAM.", fr:"Certification officielle DELE B2. Utilisé professionnellement à l'AIESEC dans le contexte LATAM.", es:"Certificación oficial DELE B2. Uso profesional en AIESEC en el contexto LATAM." },
  
+  "case0.tag":        { en:"Security · B2B SaaS · ISO 27001",          pt:"Segurança · B2B SaaS · ISO 27001",           fr:"Sécurité · B2B SaaS · ISO 27001",             es:"Seguridad · B2B SaaS · ISO 27001" },
+  "case0.title":      { en:"Audit Logs — enabling ISO 27001 certification across 3 products", pt:"Logs de Auditoria — certificação ISO 27001 em 3 produtos", fr:"Logs d'audit — certification ISO 27001 sur 3 produits", es:"Logs de Auditoría — certificación ISO 27001 en 3 productos" },
+  "case0.sub":        { en:"Platform Product Manager · Loyalty &amp; Engagement Platform · 2024–2025", pt:"Platform Product Manager · Plataforma de Fidelização &amp; Engajamento · 2024–2025", fr:"Platform Product Manager · Plateforme de Fidélisation &amp; Engagement · 2024–2025", es:"Platform Product Manager · Plataforma de Fidelización &amp; Engagement · 2024–2025" },
+  "case0.body":       { en:"Led the end-to-end discovery and delivery of Audit Logs across Clube, MinuBiz, and MinuShop — coordinating 3 PMs, engineering, security, and DevOps over 6 months. Defined the prioritization criteria, negotiated scope under deadline pressure, and recommended that log standards become a permanent acceptance criterion for all future product development.", pt:"Liderei o discovery e o delivery de Logs de Auditoria em Clube, MinuBiz e MinuShop, coordenando 3 PMs, engenharia, segurança e DevOps ao longo de 6 meses. Defini os critérios de priorização, negociei escopo sob pressão de prazo e recomendei que o padrão de logs se tornasse critério de aceite permanente para todo desenvolvimento futuro.", fr:"J'ai piloté le discovery et le delivery des Logs d'audit sur Clube, MinuBiz et MinuShop, en coordonnant 3 PMs, l'ingénierie, la sécurité et le DevOps pendant 6 mois. J'ai défini les critères de priorisation, négocié le périmètre sous pression et recommandé que les standards de logs deviennent un critère d'acceptation permanent.", es:"Lideré el discovery y el delivery de Logs de Auditoría en Clube, MinuBiz y MinuShop, coordinando 3 PMs, ingeniería, seguridad y DevOps durante 6 meses. Definí los criterios de priorización, negocié el alcance bajo presión y recomendé que los estándares de logs se convirtieran en criterio de aceptación permanente." },
+  "case0.out1.val":   { en:"ISO 27001:2022",               pt:"ISO 27001:2022",                fr:"ISO 27001:2022",               es:"ISO 27001:2022" },
+  "case0.out1.label": { en:"Certification obtained &amp; maintained", pt:"Certificação obtida e mantida", fr:"Certification obtenue et maintenue", es:"Certificación obtenida y mantenida" },
+  "case0.out2.val":   { en:"3 products",                   pt:"3 produtos",                    fr:"3 produits",                   es:"3 productos" },
+  "case0.out2.label": { en:"Clube · MinuBiz · MinuShop",   pt:"Clube · MinuBiz · MinuShop",    fr:"Clube · MinuBiz · MinuShop",   es:"Clube · MinuBiz · MinuShop" },
+  "case0.out3.val":   { en:"6 months",                     pt:"6 meses",                       fr:"6 mois",                       es:"6 meses" },
+  "case0.out3.label": { en:"Discovery to certification",   pt:"Do discovery à certificação",   fr:"Du discovery à la certification", es:"Del discovery a la certificación" },
+  "case0.quote":      { en:"\"It was work that required organization, systemic vision and articulation with different areas, ensuring that records and processes met the necessary requirements.\"", pt:"\"Foi um trabalho que exigiu organização, visão sistêmica e articulação com diferentes áreas, garantindo que os registros e processos estivessem adequados às exigências necessárias.\"", fr:"\"Ce fut un travail qui a exigé organisation, vision systémique et articulation entre différentes équipes, garantissant que les enregistrements et processus répondaient aux exigences nécessaires.\"", es:"\"Fue un trabajo que exigió organización, visión sistémica y articulación con diferentes áreas, garantizando que los registros y procesos estuvieran adecuados a los requisitos necesarios.\"" },
+ 
+  "filter.all":      { en:"All",           pt:"Todos",           fr:"Tous",            es:"Todos" },
+  "filter.real":     { en:"Real cases",    pt:"Cases reais",     fr:"Cas réels",       es:"Casos reales" },
+  "filter.business": { en:"Business cases",pt:"Business cases",  fr:"Business cases",  es:"Business cases" },
+  "badge.business":  { en:"Business case", pt:"Business case",   fr:"Business case",   es:"Business case" },
+ 
   /* WORK */
   "work.label": { en:"Selected work", pt:"Cases selecionados", fr:"Projets sélectionnés", es:"Proyectos seleccionados" },
   "work.h2":    { en:"How I think. What I ship.", pt:"Como penso. O que entrego.", fr:"Ma façon de penser. Ce que je livre.", es:"Cómo pienso. Lo que entrego." },
@@ -540,6 +622,7 @@ const i18n = {
   "case3.body":  { en:"Migration strategy from a V2 monolith to event-driven microservices for Bitso's reconciliation squad, using Strangler Fig pattern and Shadow Mode validation. Framing: trust rebuilt through co-owned SLOs.", pt:"Estratégia de migração de um monolito V2 para microsserviços orientados a eventos para o squad de reconciliação do Bitso, usando Strangler Fig pattern e Shadow Mode. Framing: confiança reconstruída via SLOs compartilhados.", fr:"Stratégie de migration d'un monolithe V2 vers des microservices event-driven pour le squad de réconciliation de Bitso, en utilisant le pattern Strangler Fig et la validation en Shadow Mode. Cadrage : confiance reconstruite via des SLOs co-gérés.", es:"Estrategia de migración de un monolito V2 a microservicios orientados a eventos para el squad de reconciliación de Bitso, usando el patrón Strangler Fig y validación en Shadow Mode. Enfoque: confianza reconstruida mediante SLOs compartidos." },
  
   "case.read":   { en:"Read the full case →", pt:"Ler o case completo →", fr:"Lire le cas complet →", es:"Leer el caso completo →" },
+  "case.soon":   { en:"Coming soon →", pt:"Em breve →", fr:"Bientôt disponible →", es:"Próximamente →" },
  
   /* EXPERIENCE */
   "exp.label":   { en:"Experience",    pt:"Experiência",    fr:"Parcours",         es:"Experiencia" },
@@ -621,6 +704,24 @@ const browserLang = navigator.language.slice(0, 2);
 const supported = ['en', 'pt', 'fr', 'es'];
 const initial = saved || (supported.includes(browserLang) ? browserLang : 'en');
 if (initial !== 'en') setLang(initial);
+ 
+ 
+/* ═══════════════════════════════════════════════
+   CASE FILTER
+═══════════════════════════════════════════════ */
+function filterCases(type) {
+  document.querySelectorAll('.case-card').forEach(card => {
+    if (type === 'all' || card.dataset.type === type) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  document.querySelectorAll('.case-filter').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === type);
+  });
+  trackEvent('case_filter', type);
+}
  
  
 /* ═══════════════════════════════════════════════
