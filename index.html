@@ -137,6 +137,8 @@
     .case-filter.active { background: var(--purple); color: var(--white); border-color: var(--purple); }
     .business-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; background: var(--gold-lt); color: var(--gold); margin-bottom: 10px; }
     .case-card.hidden { display: none; }
+    .lang-only-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; padding: 3px 10px; border-radius: 99px; background: rgba(0,0,0,0.05); color: var(--ink-soft); margin-left: 8px; vertical-align: middle; }
+    .lang-only-badge .flag { font-size: 13px; }
     .case-highlights { display: flex; flex-direction: column; gap: 6px; margin: 16px 0 20px; }
     .highlight-item { font-size: 13px; color: var(--ink-mid); padding-left: 14px; position: relative; line-height: 1.5; }
     .highlight-item::before { content: '·'; position: absolute; left: 0; color: var(--teal); font-weight: 600; }
@@ -354,6 +356,7 @@
           </a>
         </blockquote>
         <a href="https://medium.com/@jessica.castilho.castro/logs-de-auditoria-a-entrega-de-uma-demanda-de-seguran%C3%A7a-visto-como-oportunidade-de-produto-7f2035037dae" target="_blank" class="case-link" data-i18n="case.read" onclick="trackEvent('case_link_click', 'minu')">Read the full case →</a>
+        <span class="lang-only-badge">🇧🇷 <span data-i18n="badge.ptonly">Available in PT only</span></span>
       </div>
  
       <!-- Case 1: Dr.Cash -->
@@ -376,7 +379,40 @@
             <div class="outcome-label" data-i18n="case1.out3.label">Discovery to pilot</div>
           </div>
         </div>
-        <a href="https://medium.com/@jessica.castilho.castro/meu-primeiro-produto-ponta-a-ponta-40-dias-e-nasce-um-chatbot-43d8806fbada" target="_blank" class="case-link" data-i18n="case.read" onclick="trackEvent('case_link_click', 'drcash')">Read the full case →</a>
+        <a href="#" class="case-link coming-soon" data-i18n="case.comingsoon" onclick="return false;">Full case coming soon</a>
+        <span class="lang-only-badge">🇧🇷 <span data-i18n="badge.ptonly">Available in PT only</span></span>
+      </div>
+ 
+      <!-- Case 4: Dr.Cash – Chatbot / Auto-atendimento -->
+      <div class="case-card" data-type="real">
+        <div class="case-tag cx" data-i18n="case4.tag">CX · Automation · Data</div>
+        <h3 data-i18n="case4.title">Building a chatbot under crisis — and the observability layer that made it legible</h3>
+        <p class="case-sub" data-i18n="case4.sub">Dr.Cash, 2024 · Operational restructuring · CX automation</p>
+        <p class="case-body" data-i18n="case4.body">During a full operational restructuring — platform migration from Movidesk to RD Conversas and progressive team cuts — we launched the company's first chatbot in 40 days. The bot covered 6 operational flows across B2B and B2C, integrated 4 internal APIs for self-service, and became the operational backbone of the CX team. We built the observability infrastructure to know whether it was actually working.</p>
+        <div class="case-outcomes">
+          <div class="outcome">
+            <div class="outcome-val" data-i18n="case4.out1.val">0 → 40%</div>
+            <div class="outcome-label" data-i18n="case4.out1.label">Self-service resolution, month 1</div>
+          </div>
+          <div class="outcome">
+            <div class="outcome-val" data-i18n="case4.out2.val">41% → 60%</div>
+            <div class="outcome-label" data-i18n="case4.out2.label">Bot retention by August</div>
+          </div>
+          <div class="outcome">
+            <div class="outcome-val" data-i18n="case4.out3.val">CSAT 7.0</div>
+            <div class="outcome-label" data-i18n="case4.out3.label">Bot satisfaction score, month 1</div>
+          </div>
+          <div class="outcome">
+            <div class="outcome-val" data-i18n="case4.out4.val">−2pp</div>
+            <div class="outcome-label" data-i18n="case4.out4.label">Poor-service rate in company CSAT</div>
+          </div>
+        </div>
+        <div class="case-highlights">
+          <div class="highlight-item" data-i18n="case4.h1">Built the product's first observability layer from scratch: resolutivity, overflow, sentiment analysis (NLP/BERTimbau) and flow-level breakdowns — none of this existed before</div>
+          <div class="highlight-item" data-i18n="case4.h2">Coordinated 5 business areas (CX, Finance, Registration, Training, Inside Sales) + data + engineering to ship V0 in 40 days, with scoped V1–V3 roadmap</div>
+        </div>
+        <a href="https://medium.com/@jessica.castilho.castro/meu-primeiro-produto-ponta-a-ponta-40-dias-e-nasce-um-chatbot-43d8806fbada" target="_blank" class="case-link" data-i18n="case.read" onclick="trackEvent('case_link_click', 'chatbot')">Read the full case →</a>
+        <span class="lang-only-badge">🇧🇷 <span data-i18n="badge.ptonly">Available in PT only</span></span>
       </div>
  
       <div class="case-card" data-type="business">
@@ -394,6 +430,7 @@
           <a href="https://jessccastro.github.io/Business_Case_-_RD_Station_Versaofinal2911_(1).pdf" target="_blank" class="btn-case-primary" onclick="trackEvent('case_solution_click', 'rdstation')" data-i18n="case2.cta.solution">View my solution →</a>
           <a href="https://jessccastro.github.io/Desafio_Selecao_-_Product_Operation_Manager_-_Candidatos_(Pleno)_-_Case.pdf" target="_blank" class="btn-case-secondary" onclick="trackEvent('case_challenge_click', 'rdstation')" data-i18n="case2.cta.challenge">View the challenge ↗</a>
         </div>
+        <span class="lang-only-badge">🇧🇷 <span data-i18n="badge.ptonly">Available in PT only</span></span>
       </div>
  
       <div class="case-card" data-type="business">
@@ -414,6 +451,7 @@
           <a href="https://jessccastro.github.io/Case_Gearbox_Business_Case_Bitso_Jessica_Castro_May_2026.pdf" target="_blank" class="btn-case-primary" onclick="trackEvent('case_solution_click', 'bitso')" data-i18n="case3.cta.solution">View my solution →</a>
           <a href="https://jessccastro.github.io/Gearbox-_Business_Case_.pdf" target="_blank" class="btn-case-secondary" onclick="trackEvent('case_challenge_click', 'bitso')" data-i18n="case3.cta.challenge">View the challenge ↗</a>
         </div>
+        <span class="lang-only-badge">🇺🇸 <span data-i18n="badge.enonly">Available in EN only</span></span>
       </div>
  
     </div>
@@ -624,6 +662,9 @@ const i18n = {
   "filter.real":     { en:"Real cases",    pt:"Cases reais",     fr:"Cas réels",       es:"Casos reales" },
   "filter.business": { en:"Business cases",pt:"Business cases",  fr:"Business cases",  es:"Business cases" },
   "badge.business":  { en:"Business case", pt:"Business case",   fr:"Business case",   es:"Business case" },
+  "badge.ptonly":    { en:"Available in PT only", pt:"Disponível somente em PT", fr:"Disponible en PT uniquement", es:"Disponible solo en PT" },
+  "badge.enonly":    { en:"Available in EN only", pt:"Disponível somente em EN", fr:"Disponible en EN uniquement", es:"Disponible solo en EN" },
+  "case.comingsoon": { en:"Full case coming soon", pt:"Case completo em breve", fr:"Cas complet bientôt disponible", es:"Caso completo próximamente" },
  
   /* WORK */
   "work.label": { en:"Selected work", pt:"Cases selecionados", fr:"Projets sélectionnés", es:"Proyectos seleccionados" },
@@ -665,6 +706,22 @@ const i18n = {
   "case3.miro":  { en:"Full reasoning and additional artifacts on Miro ↗", pt:"Detalhamento do racional e artefatos adicionais no Miro ↗", fr:"Raisonnement complet et artefacts supplémentaires sur Miro ↗", es:"Razonamiento completo y artefactos adicionales en Miro ↗" },
   "case3.cta.solution": { en:"View my solution →", pt:"Ver minha solução →", fr:"Voir ma solution →", es:"Ver mi solución →" },
   "case3.cta.challenge": { en:"View the challenge ↗", pt:"Ver o desafio ↗", fr:"Voir le défi ↗", es:"Ver el desafío ↗" },
+ 
+  "case4.tag":        { en:"CX · Automation · Data", pt:"CX · Automação · Dados", fr:"CX · Automatisation · Données", es:"CX · Automatización · Datos" },
+  "case4.title":      { en:"Building a chatbot under crisis — and the observability layer that made it legible", pt:"Construindo um chatbot em crise — e a camada de observabilidade que tornou tudo legível", fr:"Construire un chatbot en crise — et la couche d'observabilité qui l'a rendu lisible", es:"Construyendo un chatbot en crisis — y la capa de observabilidad que lo hizo legible" },
+  "case4.sub":        { en:"Dr.Cash, 2024 · Operational restructuring · CX automation", pt:"Dr.Cash, 2024 · Reestruturação operacional · Automação de CX", fr:"Dr.Cash, 2024 · Restructuration opérationnelle · Automatisation CX", es:"Dr.Cash, 2024 · Reestructuración operacional · Automatización de CX" },
+  "case4.body":       { en:"During a full operational restructuring — platform migration from Movidesk to RD Conversas and progressive team cuts — we launched the company's first chatbot in 40 days. The bot covered 6 operational flows across B2B and B2C, integrated 4 internal APIs for self-service, and became the operational backbone of the CX team. We built the observability infrastructure to know whether it was actually working.", pt:"Durante uma reestruturação operacional completa — migração do Movidesk para o RD Conversas e cortes progressivos de time — lançamos o primeiro chatbot da empresa em 40 dias. O bot cobriu 6 fluxos operacionais em B2B e B2C, integrou 4 APIs internas para auto-serviço e se tornou a espinha dorsal do time de CX. Construímos a infraestrutura de observabilidade para saber se estava funcionando de verdade.", fr:"Durant une restructuration opérationnelle complète — migration de Movidesk vers RD Conversas et réductions progressives d'équipe — nous avons lancé le premier chatbot de l'entreprise en 40 jours. Le bot couvrait 6 flux opérationnels B2B et B2C, intégrait 4 APIs internes pour le libre-service et est devenu l'épine dorsale de l'équipe CX. Nous avons construit l'infrastructure d'observabilité pour savoir si ça fonctionnait vraiment.", es:"Durante una reestructuración operacional completa — migración de Movidesk a RD Conversas y recortes progresivos de equipo — lanzamos el primer chatbot de la empresa en 40 días. El bot cubrió 6 flujos operativos en B2B y B2C, integró 4 APIs internas para autoservicio y se convirtió en la columna vertebral del equipo CX. Construimos la infraestructura de observabilidad para saber si realmente funcionaba." },
+  "case4.out1.val":   { en:"0 → 40%",              pt:"0 → 40%",              fr:"0 → 40%",              es:"0 → 40%" },
+  "case4.out1.label": { en:"Self-service resolution, month 1", pt:"Resolução em auto-serviço, mês 1", fr:"Résolution libre-service, mois 1", es:"Resolución autoservicio, mes 1" },
+  "case4.out2.val":   { en:"41% → 60%",            pt:"41% → 60%",            fr:"41% → 60%",            es:"41% → 60%" },
+  "case4.out2.label": { en:"Bot retention by August", pt:"Retenção pelo bot até agosto", fr:"Rétention par le bot en août", es:"Retención por bot en agosto" },
+  "case4.out3.val":   { en:"CSAT 7.0",              pt:"CSAT 7.0",              fr:"CSAT 7.0",              es:"CSAT 7.0" },
+  "case4.out3.label": { en:"Bot satisfaction score, month 1", pt:"Satisfação com o bot, mês 1", fr:"Score satisfaction bot, mois 1", es:"Satisfacción con el bot, mes 1" },
+  "case4.out4.val":   { en:"−2pp",                  pt:"−2pp",                  fr:"−2pp",                  es:"−2pp" },
+  "case4.out4.label": { en:"Poor-service rate in company CSAT", pt:"Índice de mal-atendidos no CSAT geral", fr:"Taux de mauvais service dans le CSAT global", es:"Tasa de mal atendidos en CSAT general" },
+  "case4.h1":         { en:"Together with data and engineering, we built the product's first observability layer: resolutivity, overflow, sentiment analysis (NLP/BERTimbau) and flow-level breakdowns in Power BI — linked to the initiative's objective and guardrail metrics", pt:"Em conjunto com o time de dados e engenharia, construímos a primeira camada de observabilidade do produto: resolutividade, transbordo, análise de sentimento (NLP/BERTimbau) e quebras por fluxo em Power BI — linkadas às métricas de objetivo e guardrail da iniciativa", fr:"Avec l'équipe data et ingénierie, nous avons construit la première couche d'observabilité du produit : résolutivité, débordement, analyse de sentiment (NLP/BERTimbau) et décompositions par flux en Power BI — liées aux métriques d'objectif et de guardrail de l'initiative", es:"Junto con el equipo de datos e ingeniería, construimos la primera capa de observabilidad del producto: resolutividad, desbordamiento, análisis de sentimiento (NLP/BERTimbau) y desgloses por flujo en Power BI — vinculados a las métricas de objetivo y guardrail de la iniciativa" },
+  "case4.h2":         { en:"Navigated stakeholder management across 5 business areas (CX, Finance, Registration, Training, Inside Sales) + data + engineering to ship V0 in 40 days — with strong support from my lead and hands-on cross-team partnership", pt:"Acompanhei o stakeholder management de 5 áreas de negócio (CX, Financeiro, Cadastro, Treinamento, Inside Sales) + dados + engenharia para entregar a V0 em 40 dias — com muito suporte da minha líder e parceria mão na massa com os times", fr:"Navigation du stakeholder management sur 5 domaines métier (CX, Finance, Inscription, Formation, Inside Sales) + data + ingénierie pour livrer la V0 en 40 jours — avec un fort soutien de ma responsable et un partenariat terrain avec les équipes", es:"Acompañé el stakeholder management de 5 áreas de negocio (CX, Finanzas, Registro, Capacitación, Inside Sales) + datos + ingeniería para entregar la V0 en 40 días — con fuerte apoyo de mi líder y trabajo mano a mano con los equipos" },
+ 
  
   "case.read":   { en:"Read the full case →", pt:"Ler o case completo →", fr:"Lire le cas complet →", es:"Leer el caso completo →" },
   "case.soon":   { en:"Coming soon →", pt:"Em breve →", fr:"Bientôt disponible →", es:"Próximamente →" },
