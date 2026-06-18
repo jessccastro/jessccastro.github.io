@@ -137,6 +137,16 @@
     .case-filter.active { background: var(--purple); color: var(--white); border-color: var(--purple); }
     .business-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; background: var(--gold-lt); color: var(--gold); margin-bottom: 10px; }
     .case-card.hidden { display: none; }
+    .case-highlights { display: flex; flex-direction: column; gap: 6px; margin: 16px 0 20px; }
+    .highlight-item { font-size: 13px; color: var(--ink-mid); padding-left: 14px; position: relative; line-height: 1.5; }
+    .highlight-item::before { content: '—'; position: absolute; left: 0; color: var(--teal); font-weight: 600; }
+    .highlight-link { color: var(--purple); font-weight: 600; font-size: 13px; }
+    .highlight-link:hover { text-decoration: underline; }
+    .case-dual-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+    .btn-case-primary { display: inline-flex; align-items: center; gap: 6px; background: var(--purple); color: var(--white); font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: var(--radius-sm); transition: background var(--transition); }
+    .btn-case-primary:hover { background: #2e2270; text-decoration: none; }
+    .btn-case-secondary { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: var(--ink-mid); font-size: 13px; font-weight: 500; padding: 9px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border); transition: border-color var(--transition), color var(--transition); }
+    .btn-case-secondary:hover { border-color: var(--purple); color: var(--purple); text-decoration: none; }
  
     /* LANGUAGES SHOWCASE — new section */
     .lang-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin-top: 32px; }
@@ -311,8 +321,8 @@
 <section id="work">
   <div class="container">
     <span class="section-label" data-i18n="work.label">Selected work</span>
-    <h2 data-i18n="work.h2">How I think. What I ship.</h2>
-    <p style="margin-bottom:28px" data-i18n="work.sub">Real projects — each with a problem worth solving, a process worth documenting, and an outcome worth measuring.</p>
+    <h2 data-i18n="work.h2">How I think. And what I deliver.</h2>
+    <p style="margin-bottom:28px" data-i18n="work.sub">Business cases with demonstrations of my reasoning process, problem analysis and solution design. Real projects with problems worth solving, processes worth documenting, and outcomes worth measuring.</p>
  
     <!-- Filter tabs -->
     <div class="case-filters" role="tablist">
@@ -387,10 +397,21 @@
       <div class="case-card" data-type="business">
         <div class="case-tag cx" data-i18n="case3.tag">Reconciliation · Payments · Crypto</div>
         <span class="business-badge" data-i18n="badge.business">Business case</span>
-        <h3 data-i18n="case3.title">AUM Reconciliation Platform — monolith to microservices</h3>
-        <p class="case-sub" data-i18n="case3.sub">Bitso — 2026 · Business case (selection process)</p>
-        <p class="case-body" data-i18n="case3.body">Migration strategy from a V2 monolith to event-driven microservices for Bitso's reconciliation squad, using Strangler Fig pattern and Shadow Mode validation. Framing: trust rebuilt through co-owned SLOs.</p>
-        <span class="case-link coming-soon" data-i18n="case.soon">Coming soon →</span>
+        <h3 data-i18n="case3.title">Platform Reconciliation — Assets Under Management: when the real problem is trust, not architecture</h3>
+        <p class="case-sub" data-i18n="case3.sub">Bitso — May 2026 · Business case (selection process)</p>
+        <p class="case-body" data-i18n="case3.body">Business case for Bitso's Reconciliation squad. Given a critical solvency platform with broken trust between Ops and Engineering, I structured a V2 → V3 migration strategy — treating trust reconstruction as a precondition for the technical migration. 5-day process using Matrix FHD, Stakeholder Map, C4 diagrams V2 and V3, industry-benchmarked SLO proposals, capacity model, and a tiered migration plan.</p>
+        <div class="case-highlights">
+          <div class="highlight-item" data-i18n="case3.h1">Core framing: political negotiation before technical decision</div>
+          <div class="highlight-item" data-i18n="case3.h2">4 questions answered: stakeholders, scoping under ambiguity, prioritization, defining success</div>
+          <div class="highlight-item" data-i18n="case3.h3">Artifacts: C4 V2+V3, benchmarked SLOs, migration plan by complexity tier</div>
+          <div class="highlight-item">
+            <a href="https://miro.com/app/board/uXjVK5aYguw=/" target="_blank" class="highlight-link" onclick="trackEvent('case_miro_click', 'bitso')" data-i18n="case3.miro">Full reasoning and additional artifacts on Miro ↗</a>
+          </div>
+        </div>
+        <div class="case-dual-cta">
+          <a href="https://jessccastro.github.io/Case_Gearbox_Business_Case_Bitso_Jessica_Castro_May_2026.pdf" target="_blank" class="btn-case-primary" onclick="trackEvent('case_solution_click', 'bitso')" data-i18n="case3.cta.solution">View my solution →</a>
+          <a href="https://jessccastro.github.io/Gearbox-_Business_Case_.pdf" target="_blank" class="btn-case-secondary" onclick="trackEvent('case_challenge_click', 'bitso')" data-i18n="case3.cta.challenge">View the challenge ↗</a>
+        </div>
       </div>
  
     </div>
@@ -598,8 +619,13 @@ const i18n = {
  
   /* WORK */
   "work.label": { en:"Selected work", pt:"Cases selecionados", fr:"Projets sélectionnés", es:"Proyectos seleccionados" },
-  "work.h2":    { en:"How I think. What I ship.", pt:"Como penso. O que entrego.", fr:"Ma façon de penser. Ce que je livre.", es:"Cómo pienso. Lo que entrego." },
-  "work.sub":   { en:"Real projects — each with a problem worth solving, a process worth documenting, and an outcome worth measuring.", pt:"Projetos reais — cada um com um problema que valia resolver, um processo que valia documentar e um resultado que valia medir.", fr:"Des projets réels — chacun avec un problème à résoudre, un processus à documenter et un résultat à mesurer.", es:"Proyectos reales — cada uno con un problema que valía resolver, un proceso que valía documentar y un resultado que valía medir." },
+  "work.h2":    { en:"How I think. And what I deliver.", pt:"Como penso. E o que entrego.", fr:"Comment je pense. Et ce que je livre.", es:"Cómo pienso. Y lo que entrego." },
+  "work.sub":   {
+    en: "Business cases with demonstrations of my reasoning process, problem analysis and solution design. Real projects with problems worth solving, processes worth documenting, and outcomes worth measuring.",
+    pt: "Business cases fictícios com demonstrações do meu processo de raciocínio, análise de problema e desenho de solução. Projetos reais com problema que valia resolver, processo que valia documentar e um resultado que valia medir.",
+    fr: "Business cases fictifs avec des démonstrations de mon processus de raisonnement, d'analyse de problème et de conception de solution. Projets réels avec un problème qui méritait d'être résolu, un processus à documenter et un résultat à mesurer.",
+    es: "Business cases ficticios con demostraciones de mi proceso de razonamiento, análisis de problema y diseño de solución. Proyectos reales con problemas que valían la pena resolver, procesos que valían documentar y resultados que valían medir."
+  },
  
   "case1.tag":        { en:"Payments · Credit · B2B SaaS",          pt:"Pagamentos · Crédito · B2B SaaS",           fr:"Paiements · Crédit · B2B SaaS",             es:"Pagos · Crédito · B2B SaaS" },
   "case1.title":      { en:"Expanding credit access through a new lender integration", pt:"Ampliando acesso ao crédito com nova integração de credor", fr:"Améliorer l'accès au crédit via une nouvelle intégration de prêteur", es:"Ampliar el acceso al crédito con una nueva integración de acreedor" },
@@ -617,9 +643,15 @@ const i18n = {
   "case2.body":  { en:"Structured a Product Operations capability for a growing PM team — defining rituals, templates, and metrics frameworks that enable PMs to operate with less friction and more consistency at scale.", pt:"Estruturei uma capacidade de Product Operations para um time de produto em crescimento — definindo rituais, templates e frameworks de métricas que permitem PMs operarem com menos atrito e mais consistência.", fr:"Mise en place d'une capacité Product Operations pour une équipe PM en croissance — définition des rituels, templates et frameworks de métriques permettant aux PMs de travailler avec moins de friction et plus de cohérence.", es:"Estructuré una capacidad de Product Operations para un equipo de PM en crecimiento — definiendo rituales, plantillas y marcos de métricas que permiten a los PMs operar con menos fricción y más consistencia." },
  
   "case3.tag":   { en:"Reconciliation · Payments · Crypto", pt:"Reconciliação · Pagamentos · Cripto", fr:"Réconciliation · Paiements · Crypto", es:"Reconciliación · Pagos · Cripto" },
-  "case3.title": { en:"AUM Reconciliation Platform — monolith to microservices", pt:"Plataforma de Reconciliação AUM — monolito para microsserviços", fr:"Plateforme de réconciliation AUM — migration monolithe vers microservices", es:"Plataforma de Reconciliación AUM — monolito a microservicios" },
-  "case3.sub":   { en:"Bitso — 2026 · Business case (selection process)", pt:"Bitso — 2026 · Business case (processo seletivo)", fr:"Bitso — 2026 · Business case (processus de sélection)", es:"Bitso — 2026 · Business case (proceso de selección)" },
-  "case3.body":  { en:"Migration strategy from a V2 monolith to event-driven microservices for Bitso's reconciliation squad, using Strangler Fig pattern and Shadow Mode validation. Framing: trust rebuilt through co-owned SLOs.", pt:"Estratégia de migração de um monolito V2 para microsserviços orientados a eventos para o squad de reconciliação do Bitso, usando Strangler Fig pattern e Shadow Mode. Framing: confiança reconstruída via SLOs compartilhados.", fr:"Stratégie de migration d'un monolithe V2 vers des microservices event-driven pour le squad de réconciliation de Bitso, en utilisant le pattern Strangler Fig et la validation en Shadow Mode. Cadrage : confiance reconstruite via des SLOs co-gérés.", es:"Estrategia de migración de un monolito V2 a microservicios orientados a eventos para el squad de reconciliación de Bitso, usando el patrón Strangler Fig y validación en Shadow Mode. Enfoque: confianza reconstruida mediante SLOs compartidos." },
+  "case3.title": { en:"Platform Reconciliation — Assets Under Management: when the real problem is trust, not architecture", pt:"Reconciliação de Plataforma — Assets Under Management: quando o problema real é confiança, não arquitetura", fr:"Réconciliation de Plateforme — Assets Under Management : quand le vrai problème est la confiance, pas l'architecture", es:"Reconciliación de Plataforma — Assets Under Management: cuando el problema real es la confianza, no la arquitectura" },
+  "case3.sub":   { en:"Bitso — May 2026 · Business case (selection process)", pt:"Bitso — Maio 2026 · Business case (processo seletivo)", fr:"Bitso — Mai 2026 · Business case (processus de sélection)", es:"Bitso — Mayo 2026 · Business case (proceso de selección)" },
+  "case3.body":  { en:"Business case for Bitso's Reconciliation squad. Given a critical solvency platform with broken trust between Ops and Engineering, I structured a V2 → V3 migration strategy — treating trust reconstruction as a precondition for the technical migration. 5-day process using Matrix FHD, Stakeholder Map, C4 diagrams V2 and V3, industry-benchmarked SLO proposals, capacity model, and a tiered migration plan.", pt:"Business case para o squad de Reconciliação da Bitso. Dado um sistema crítico de solvência com confiança quebrada entre Ops e Engenharia, estruturei uma estratégia de migração V2 → V3 — tratando a reconstrução de confiança como pré-condição para a migração técnica. Processo de 5 dias com Matrix FHD, Mapa de Stakeholders, diagramas C4 V2 e V3, proposta de SLOs benchmarkados, capacity model e plano de migração por tiers.", fr:"Business case pour le squad Réconciliation de Bitso. Face à une plateforme de solvabilité critique avec une confiance brisée entre Ops et Ingénierie, j'ai structuré une stratégie de migration V2 → V3 — en traitant la reconstruction de confiance comme prérequis à la migration technique. Processus de 5 jours avec Matrix FHD, Carte des parties prenantes, diagrammes C4 V2 et V3, SLOs benchmarkés, capacity model et plan de migration par tiers.", es:"Business case para el squad de Reconciliación de Bitso. Ante una plataforma crítica de solvencia con confianza rota entre Ops e Ingeniería, estructuré una estrategia de migración V2 → V3 — tratando la reconstrucción de confianza como precondición para la migración técnica. Proceso de 5 días con Matrix FHD, Mapa de Stakeholders, diagramas C4 V2 y V3, SLOs benchmarkados, capacity model y plan de migración por tiers." },
+  "case3.h1":    { en:"Core framing: political negotiation before technical decision", pt:"Framing central: negociação política antes da decisão técnica", fr:"Cadrage central : négociation politique avant décision technique", es:"Encuadre central: negociación política antes de decisión técnica" },
+  "case3.h2":    { en:"4 questions answered: stakeholders, scoping under ambiguity, prioritization, defining success", pt:"4 perguntas respondidas: stakeholders, escopo sob ambiguidade, priorização, definição de sucesso", fr:"4 questions répondues : parties prenantes, cadrage sous ambiguïté, priorisation, définition du succès", es:"4 preguntas respondidas: stakeholders, alcance bajo ambigüedad, priorización, definición de éxito" },
+  "case3.h3":    { en:"Artifacts: C4 V2+V3, benchmarked SLOs, migration plan by complexity tier", pt:"Artefatos: C4 V2+V3, SLOs benchmarkados, plano de migração por tier de complexidade", fr:"Artefacts : C4 V2+V3, SLOs benchmarkés, plan de migration par niveau de complexité", es:"Artefactos: C4 V2+V3, SLOs benchmarkados, plan de migración por tier de complejidad" },
+  "case3.miro":  { en:"Full reasoning and additional artifacts on Miro ↗", pt:"Detalhamento do racional e artefatos adicionais no Miro ↗", fr:"Raisonnement complet et artefacts supplémentaires sur Miro ↗", es:"Razonamiento completo y artefactos adicionales en Miro ↗" },
+  "case3.cta.solution": { en:"View my solution →", pt:"Ver minha solução →", fr:"Voir ma solution →", es:"Ver mi solución →" },
+  "case3.cta.challenge": { en:"View the challenge ↗", pt:"Ver o desafio ↗", fr:"Voir le défi ↗", es:"Ver el desafío ↗" },
  
   "case.read":   { en:"Read the full case →", pt:"Ler o case completo →", fr:"Lire le cas complet →", es:"Leer el caso completo →" },
   "case.soon":   { en:"Coming soon →", pt:"Em breve →", fr:"Bientôt disponible →", es:"Próximamente →" },
