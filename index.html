@@ -812,18 +812,15 @@ if (initial !== 'en') setLang(initial);
 /* ═══════════════════════════════════════════════
    CASE FILTER
 ═══════════════════════════════════════════════ */
-function filterCases(type) {
+function filterCases(filter) {
   document.querySelectorAll('.case-card').forEach(card => {
-    if (type === 'all' || card.dataset.type === type) {
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
+    card.classList.toggle('hidden', filter !== 'all' && card.dataset.type !== filter);
   });
   document.querySelectorAll('.case-filter').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.filter === type);
+    btn.classList.toggle('active', btn.dataset.filter === filter);
   });
-  trackEvent('case_filter', type);
+  // linha nova ↓
+  trackEvent('case_filter_click', filter);
 }
  
  
