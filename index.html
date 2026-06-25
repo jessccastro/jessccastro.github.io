@@ -835,7 +835,27 @@ function trackEvent(name, label) {
   if (typeof plausible !== 'undefined') plausible(name, { props: { label: label || '' } });
   console.log('[analytics]', name, label || '');
 }
- 
+
+/* language_switch — detecta clique em qualquer lang-btn */
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const previous = document.querySelector('.lang-btn.active')?.dataset.lang || 'unknown';
+    const selected = btn.dataset.lang;
+    if (selected !== previous) {
+      trackEvent('language_switch', previous + '_to_' + selected);
+    }
+  });
+});
+
+/* medium_case_click — captura qual case gerou o clique pro Medium */
+document.querySelectorAll('a[href*="medium.com"]').forEach(link => {
+  link.addEventListener('click', () => {
+    const card = link.closest('.case-card');
+    const caseTitle = card ? card.querySelector('h3')?.innerText?.slice(0, 60) : 'footer_profile';
+    trackEvent('medium_case_click', caseTitle);
+  });
+});
+
 // Active nav on scroll
 const sections = document.querySelectorAll('section[id], footer[id]');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -847,7 +867,3 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.25 });
 sections.forEach(s => obs.observe(s));
-</script>
- 
-</body>
-</html>
